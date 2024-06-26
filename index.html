@@ -9,11 +9,9 @@
     <script src="js/copyText.js"></script>
     <!--Include Latex (optional)-->
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">
-       MathJax.Hub.Config({
-           tex2jax: {inlineMath: [['$', '$']]},
-           messageStyle: "none"
-       });
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax.typeset();
     </script>
 
     <!-- Include the icon fonts stylesheet-->
@@ -31,7 +29,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Website Title -->
-    <title>Github Pages Template</title>
+    <title>TrackGo</title>
     <!-- The description that appears when you share the link -->
     <meta property="og:description" content="TrackGo: An Approach for Controllable Video Generation based on Point Trajectories"/>
     <!-- Used to display page descriptions in search results -->
@@ -268,20 +266,31 @@
             <h2 class="card-title card-title-margin">Methodology</h2>
             <hr class="body-hr"/>
             <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo
-                dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero,
-                elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate
-                dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue
-                felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla
-                vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl,
-                porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras
-                volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam.
-                Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+                Our method consists of two parts: image-to-video(I2V) model and TrackAdapter. 
             </p>
             <div class="text-center">
-                <figure class="figure">
-                    <img src="assets/method.png" class="figure-img img-fluid rounded" alt="method">
-                    <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                <figure class="figure" style="width: 70%; height: auto;">
+                    <img src="assets/arch.png" class="figure-img img-fluid rounded" alt="method">
+                    <figcaption class="figure-caption">(a) <b>Overview of TrackGo.</b> TrackGo generates videos by taking user input image 
+                        <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>𝐈</mi></math>
+                       and latent input 
+                       <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <msub>
+                          <mi>𝐳</mi>
+                          <mi>𝐭</mi>
+                        </msub>
+                      </math>
+                     as inputs based on an image-to-video diffusion model. By the preprocessing, point trajectories
+                     <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>𝐏</mi>
+                      </math>
+                     can be obtained from 
+                     <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>𝐈</mi></math>
+                     . After
+                     <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>𝐏</mi></math>
+                     passes through the Encoder, it is injected into the model as a condition embed and processed by the TrackAdapter. 
+                     (b) The calculation process of temporal self-attention with TrackAdapter.
+                    </figcaption>
                 </figure>
             </div>
         </div>
@@ -347,19 +356,6 @@
                 </figure>
             </div>
 
-        </div>
-    </div>
-    <br>
-
-    <!-- Supplementary Material -->
-    <div class="card">
-        <div class="card-body">
-            <h2 class="card-title card-title-margin">Supplementary Material</h2>
-            <hr class="body-hr"/>
-            <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo
-                dapibus sit amet.
-            </p>
         </div>
     </div>
     <br>
