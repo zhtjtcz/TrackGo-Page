@@ -297,64 +297,83 @@
     </div>
     <br>
 
+    <!-- Camera Motion -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title card-title-margin">Camera Motion</h2>
+            <hr class="body-hr"/>
+            <p class="card-text">
+                TrackGo can also achieve the effect of camera motion.
+                By simply selecting the entire screen as the motion area, an effect that moves along a specified trajectory can be achieved. 
+            </p>
+            <div class="text-center">
+                <figure class="figure" style="width: 70%; height: auto;">
+                    <img src="assets/camera.png" class="figure-img img-fluid rounded" alt="method">
+                    <figcaption class="figure-caption">
+                        Various camera control results of TrackGo. The entire image is selected as the motion area.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <br>
+
     <!-- Experiments -->
     <div class="card">
         <div class="card-body">
             <h2 class="card-title card-title-margin">Experiments</h2>
             <hr class="body-hr"/>
             <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo
-                dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero,
-                elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate
-                dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue
-                felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla
-                vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl,
-                porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras
-                volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam.
-                Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+                We compare our approach with other approaches on VIPSeg dataset and our internal dataset. We select FVD and FID as evaluation metrics.
             </p>
             <br>
 
             <!-- Table example -->
-            <table class="table">
+            <table class="table" style="width: 70%; height: auto; text-align: center; margin: 0 auto;" >
                 <thead>
                 <tr class="table-primary">
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col" colspan="2">VIPSeg</th>
+                    <th scope="col" colspan="2">Internal dataset</th>
                 </tr>
                 </thead>
                 <tbody class="table-group-divider">
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th scope="row">Method</th>
+                    <td>Base Arch</td>
+                    <td>FVD &darr;</td>
+                    <td>FID &darr;</td>
+                    <td>FVD &darr;</td>
+                    <td>FID &darr;</td>
                 </tr>
                 <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
+                    <th scope="row">DragNUWA</th>
+                    <td>SVD</td>
+                    <td>321.31</td>
+                    <td>30.15</td>
+                    <td>178.37</td>
+                    <td>38.07</td>
                 </tr>
                 <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
+                    <th scope="row">DragAnything</th>
+                    <td>SVD</td>
+                    <td>294.91</td>
+                    <td>28.16</td>
+                    <td>169.73</td>
+                    <td>32.85</td>
+                </tr>
+                <tr>
+                    <th scope="row">TrackGo</th>
+                    <td>SVD</td>
+                    <td class="bold">248.27</td>
+                    <td class="bold">25.60</td>
+                    <td class="bold">136.11</td>
+                    <td class="bold">29.19</td>
                 </tr>
                 </tbody>
             </table>
-
             <br>
-
-            <div class="text-center">
-                <figure class="figure">
-                    <img src="./assets/experiments.png" class="img-thumbnail figure-img img-fluid rounded"
-                         alt="experiments">
-                    <figcaption class="figure-caption">A caption for the above image.</figcaption>
-                </figure>
-            </div>
 
         </div>
     </div>
