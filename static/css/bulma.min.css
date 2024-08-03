@@ -1,0 +1,18 @@
+#carousel {
+    width: 70%; /* 原来是 70% */
+    height: auto;
+}
+
+#carousel .img-txt {
+    margin-bottom: 10px; /* 例如，调整图片和文本之间的间距 */
+}
+
+#carousel img {
+    width: 100%;
+    height: auto;
+}
+
+#carousel p {
+    text-align: center;
+    font-size: 16px;
+}
