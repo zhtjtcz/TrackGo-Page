@@ -13,6 +13,10 @@
 .blog-header-logo:hover {
     text-decoration: none;
 }
+html, body {
+  overflow-x: hidden; /* 隐藏水平滚动条 */
+}
+
 
 .colorful-text {
     margin-top: 0px;
