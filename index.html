@@ -159,12 +159,13 @@
         <div class="card-body">
             <h2 class="card-title text-center card-title-margin">Abstract</h2>
             <p class="card-text">
-                Recent diffusion-based controllable video generation has achieved motion control for single or multiple objects. However, accurate control with complicated scenarios remains challenging, such as motion control of fine-grained object parts,  sophisticated moving trajectories, and coherent background movement. 
-                In this paper, we introduce <i>TrackGo</i>, a novel approach that utilizes sparse yet effective point trajectories for enhanced motion control. 
-                First, we extract trajectory-based condition features for control points, which are generated from user-input arrows and masked regions. 
-                Second, we propose TrackAdapter, an efficient and lightweight adapter that can be easily integrated into existing temporal attention modules. 
-                TrackAdapter precisely activates the moving regions of the target object(s) or part(s) within the attention maps, guided by the control inputs. This enables more precise and fine-grained control of movement. 
-                Our experiments demonstrate that <i>TrackGo</i> achieves state-of-the-art performance on FVD  and FID scores.
+                Recent advances in diffusion-based controllable video generation have achieved motion control for single or multiple objects. However, accurate control in complex scenarios remains challenging, particularly for fine-grained object parts, sophisticated moving trajectories, and coherent background movement.
+                In this paper, we introduce <i>TrackGo</i>, a novel approach that utilizes simple yet effective point trajectories for enhanced motion control. 
+                Specifically, we propose leveraging arrows and masks to control the movement of objects, offering a more flexible and precise method of control.
+                Our method extracts trajectory-based condition features for control points, which are generated from these user-defined inputs.
+                We also propose TrackAdapter, an efficient and lightweight adapter that can be seamlessly integrated into existing temporal attention modules.
+                TrackAdapter can precisely activate the moving regions of the target object(s) or part(s) within the attention maps, guided by the control inputs.
+                Our experiments demonstrate that <i>TrackGo</i> achieves state-of-the-art performance on FVD, FID and ObjMC scores.
             </p>
         </div>
     </div>
@@ -308,7 +309,7 @@
             <h2 class="card-title card-title-margin">Experiments</h2>
             <hr class="body-hr"/>
             <p class="card-text">
-                We compare our approach with other approaches on VIPSeg dataset and our internal dataset. We select FVD and FID as evaluation metrics.
+                We compare our approach with other approaches on VIPSeg dataset and our internal dataset. We select FVD, FID and ObjMC as evaluation metrics.
             </p>
             <br>
 
